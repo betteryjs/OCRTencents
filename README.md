@@ -5,9 +5,9 @@
 ## 安装`tencentcloud-sdk-cpp`
 
 ```shell
-sudo apt-get install libcurl4-openssl-dev
-sudo apt-get install libssl-dev
-sudo apt-get install uuid-dev
+sudo apt-get install libcurl4-openssl-dev -y
+sudo apt-get install libssl-dev -y
+sudo apt-get install uuid-dev -y
 git clone https://github.com/TencentCloud/tencentcloud-sdk-cpp.git
 cd tencentcloud-sdk-cpp
 mkdir sdk_build
@@ -52,6 +52,8 @@ cmake ..
 make -j 6
 make install
 cd bin
+sudo cp ocrimg /usr/bin
+sudo chmod 777 /usr/bin/ocrimg
 ```
 
 ### 测试
@@ -120,7 +122,7 @@ ocrimg -i=input.png  -o=aa.txt 输入图片名字 输出文件识别内容到文
 ```
 
 ```shell
-./ocrimg -i=test.png -f
+./ocrimg -i=test_txt.png -f
 ls
 ```
 
